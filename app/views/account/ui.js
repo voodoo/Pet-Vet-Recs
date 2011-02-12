@@ -68,4 +68,26 @@ account_win.add(account_button);
 if($app.authed()){
 	account_button.image = 'img/check.png';
 	account_button.title = '  Authenticated';
+} else {
+	
+	var signup_button = Titanium.UI.createButton({
+	  title: 'Sign Up',
+	  left:10,
+	  top: 10,
+	  width: 300,
+	  height: 60,
+	  font:{fontSize:30},
+		borderStyle:Titanium.UI.INPUT_BORDERSTYLE_BEZEL//,
+		//backgroundColor:'teal'
+		//backgroundImage:'img/BUTT_grn_off.png'
+	});
+	
+	signup_button.addEventListener('click', function(){
+		web.url = $app.uri() + '/signup';
+		tabGroup.setActiveTab(0);
+		
+	});
+	account_win.add(signup_button);
+	
+	
 }

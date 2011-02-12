@@ -28,7 +28,7 @@ var manage_tab = Titanium.UI.createTab({
 
 
 var web = Titanium.UI.createWebView({
-	  url:$app.remote_login_path()
+	  url:$app.remote_login_or_default_uri()
 });	
 
 // web.url is not updating wtf
